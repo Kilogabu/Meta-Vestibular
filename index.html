@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="/assets/fonts/jetbrains-mono-var-latin.woff2" as="font" type="font/woff2" crossorigin="">
+</head>
+    
+<body>
+
+    <header>
+        <div class="titulo">
+            <div class="nav-img">
+                <img src="assets/metavestibular.png" class="logo-img">
+            </div>
+            <h1> Meta <span id="vestibular-word">Vestibular</span> </h1>
+        </div>
+        
+        <div class="search-bar">
+            <input placeholder="Buscar Questões, materiais, livros, etc" type="text" id="search-bar" name="search-bar" maxlength="150" size="100"/>
+            
+            <button class="search-interact" id="search-button">
+                <i class="fa-solid fa-magnifying-glass" class="search-icon"></i> <!-- alguma coisa ai -->  
+            </button>
+        </div>
+        
+        <div class="profile">
+            <button class="profile-interact" id="profile-button">
+                <i class="fa-regular fa-user" class="nav-icon"></i>
+            </button>
+                
+        </div>
+    </header>
+
+
+    <div class="app-container">
+    
+        <aside class="sidebar">
+            
+            <nav class="nav-menu">
+            
+                <!-- icone da casinha -->
+                <a href="#" class="sidebar-interact" id="active">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-house" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Início</p>
+                </a>
+            
+                <a href="#" class="sidebar-interact" id="questoes">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-pen" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Questões</p>
+                </a>
+
+                <a href="#" class="sidebar-interact" id="materiais">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-layer-group" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Materias didáticos</p>
+                </a>
+            
+                <a href="#" class="sidebar-interact" id="livros">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-book" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Livros</p>
+                </a>
+            
+                <a href="#" class="sidebar-interact" id="progresso">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-chart-column" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Meu Progresso</p>
+                    
+                </a>
+            
+                <a href="#" class="sidebar-interact" id="configuracoes">
+                    <div class="sidebar-icons">
+                        <i class="fa-solid fa-gear" class="sidebar-icon"></i>
+                    </div>
+                    <p class="sidebar-text">Configurações</p>
+            
+                </a>
+            
+            </nav>
+            
+
+        </aside>
+
+        <!-- ------------------------------------------------------------------------------------------------------------------------ -->
+        <main>
+            <div class="infos-main">
+                
+                <section class="main-banner">
+                    <div class="banner-info">
+                        <h1>A mente que se abre para o novo jamais volta ao seu tamanho original.</h1>
+                        <p>Estude com foco, tenha acesso a questões de vestibulares, materiais didáticos e livros completos e resumidos, tudo em um só lugar.</p>
+                        <a href="#" class="sub-button">
+                            Comece agora
+                            <i class="fa-solid fa-arrow-right-long" class="arrow-icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="img-container">
+                        <img src="assets/bannerimg.png" class="banner-img">
+                    </div>
+                </section>
+                
+
+                <section class="articles-section">
+                    <div class="articles-title">
+                        <h1>Os artigos do mês.</h1>
+                    </div>
+
+                    <div class="articles-container">
+
+                        <a href="#" class="article-card">
+                            <div class="article-image">
+                                <img src="assets/mecanica.png">
+                            </div>
+                            
+                            <div class="article-topic" id="mecanica">
+                                <h2>FÍSICA • MECÂNICA</h2>
+                            </div>
+                            
+                            <div class="article-text">
+                                <h2>As Leis de Newton: o que cada uma diz e por que funcionam</h2>
+                                <p>Inércia, força e reação. Em vez de decorar os três enunciados, entenda o princípio físico de cada um.</p>
+                            </div>
+                        </a>
+                        
+                        
+                        <a href="#" class="article-card">
+                            <div class="article-image">
+                                <img src="assets/eletricidade.png">
+                            </div>
+                            
+                            <div class="article-topic" id="eletricidade">
+                                <h2>FÍSICA • ELETRICIDADE</h2>
+                            </div>
+                            
+                            <div class="article-text">
+                                <h2>Carga elétrica: o que é, como se comporta e por que importa</h2>
+                                <p>O ponto de partida de toda a eletricidade. Entenda a carga antes de chegar em campo, corrente e circuitos.</p>
+                            </div>
+                        </a>
+                        
+                        
+                        <a href="#" class="article-card">
+                            <div class="article-image">
+                                <img src="assets/termodinamica.png">
+                            </div>
+                            
+                            <div class="article-topic" id="termodinamica">
+                                <h2>FÍSICA • TERMODINÂMICA</h2>
+                            </div>
+                            
+                            <div class="article-text">
+                                <h2>Calorimetria: como o calor se transforma em variação de temperatura</h2>
+                                <p>Calor específico, capacidade térmica e trocas de calor: explicados pelo que de fato acontece com a energia.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </section>
+                
+                
+                <section class="fdc" aria-labelledby="fdc-h">
+                    <div class="un-container">
+                        <div class="fdc-inner">
+                            
+                            <div class="fdc-left">
+                                <h2 id="fdc-h"><span class="hi-g">Estudar Física </span>de verdade antes da prova.</h2>
+                                <p>Toda a Física do ensino médio, do fenômeno à fórmula, com exercícios resolvidos passo a passo e o método "entender, não decorar" aplicado em problemas reais de prova.</p>
+                            </div>
+
+                            <div class="fdc-card">
+                                <div class="fdc-when">
+                                    <span class="fdc-when-d">TODOS</span>
+
+                                    <div class="fdc-when-info">
+                                        <span class="fdc-when-mo">Conteúdos do enem</span>
+                                    </div>
+                                </div>
+                            
+                                <h3>Lições de Física</h3>
+                                <p>Acesso imediato após a matrícula. Estude no seu ritmo, com exercícios corrigidos em vídeo.</p>
+                                <a href="#" class="fdc-btn">Conhecer Lições de Física →</a>
+                                <p class="fdc-note">Aprender nunca é demais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    <!-- ------------------------------------------------------------------------------------------------------------------------- -->
+            
+            
+        </main>
+    </div>
+</body>
+
+</html>
