@@ -10,12 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="preload" href="/assets/fonts/jetbrains-mono-var-latin.woff2" as="font" type="font/woff2" crossorigin="">
-    
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <header>
+        <button class="hamburger-btn" id="hamburger-btn" type="button"
+                aria-label="Abrir menu de navegação" aria-controls="sidebar" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <div class="titulo">
             <div class="header-img">
                 <img src="assets/metavestibular.png" class="logo-img">
@@ -39,10 +44,16 @@
         </div>
     </header>
 
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <div class="app-container">
-    
-        <aside class="sidebar">
+        <!-- ALTERADO: adicionado id="sidebar" ao <aside> original (usado pelo JavaScript e pelo aria-controls do botão) -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- ADICIONADO: botão "X" para fechar o menu (aparece só no mobile, dentro do menu lateral) -->
+            <button class="sidebar-close" id="sidebar-close" type="button" aria-label="Fechar menu de navegação">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             
             <nav class="nav-menu">
             
@@ -61,7 +72,7 @@
                     <p class="sidebar-text">Questões</p>
                 </a>
 
-                <a href="#" class="sidebar-interact" id="materiais">
+                <a href="materiais.html" class="sidebar-interact" id="materiais">
                     <div class="sidebar-icons">
                         <i class="fa-solid fa-layer-group" class="sidebar-icon"></i>
                     </div>
@@ -100,8 +111,6 @@
                 </a>
             
             </nav>
-            
-
         </aside>
 
         <!-- ------------------------------------------------------------------------------------------------------------------------ -->
@@ -123,11 +132,12 @@
                     </div>
                 </section>
                 
-
                 <section class="articles-section">
+                    
                     <div class="articles-title">
                         <h1>Os artigos do mês.</h1>
                     </div>
+
 
                     <div class="articles-container">
 
@@ -145,8 +155,7 @@
                                 <p>Inércia, força e reação. Em vez de decorar os três enunciados, entenda o princípio físico de cada um.</p>
                             </div>
                         </a>
-                        
-                        
+                                
                         <a href="#" class="article-card">
                             <div class="article-image">
                                 <img src="assets/eletricidade.png">
@@ -161,8 +170,7 @@
                                 <p>O ponto de partida de toda a eletricidade. Entenda a carga antes de chegar em campo, corrente e circuitos.</p>
                             </div>
                         </a>
-                        
-                        
+                            
                         <a href="#" class="article-card">
                             <div class="article-image">
                                 <img src="assets/termodinamica.png">
@@ -205,16 +213,17 @@
                                 <a href="#" class="fdc-btn">Conhecer Lições de Física →</a>
                                 <p class="fdc-note">Aprender nunca é demais.</p>
                             </div>
+
                         </div>
                     </div>
                 </section>
             </div>
-    <!-- ------------------------------------------------------------------------------------------------------------------------- -->
-            
             
         </main>
-
     </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
     <footer>
         <div class="footer-desc">
             <div class="footer-logo">
@@ -224,34 +233,25 @@
                 <h2>Meta <span class="vestibular-word" id="footer-span">Vestibular</span></h2>
             </div>
     
-            <p>Todas as matérias para ENEM, vestibulares e concursos militares. Centenas de conteúdos organizados para
-                melhorar a sua rotina de estudos!</p>
+            <p>Todas as matérias para ENEM, vestibulares e concursos militares. Centenas de conteúdos organizados para melhorar a sua rotina de estudos!</p>
         </div>
-    
     
     
         <div class="footer-col">
             <h3>Editais Oficiais</h3>
-            <a class="footer-a" href="https://s5.static.brasilescola.uol.com.br/enem/2026/05/1-enem-2026-edital.pdf">ENEM
-                2026 Edital</a>
-            <a class="footer-a" href="https://www.fuvest.br/arquivos/vestibular/fuvest2027-resolucao-DOE.pdf">FUVEST 2027
-                Edital</a>
-            <a class="footer-a"
-                href="https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf">Unicamp 2027
-                Edital</a>
+            <a class="footer-a" href="https://s5.static.brasilescola.uol.com.br/enem/2026/05/1-enem-2026-edital.pdf">ENEM 2026 Edital</a>
+            <a class="footer-a" href="https://www.fuvest.br/arquivos/vestibular/fuvest2027-resolucao-DOE.pdf">FUVEST 2027 Edital</a>
+            <a class="footer-a" href="https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf">Unicamp 2027 Edital</a>
     
         </div>
     
         <div class="footer-col">
             <h3>Conteúdos Recomendados</h3>
-            <a href="https://universonarrado.com.br/cursos/licoes-de-fisica" class="footer-a">Física com Universo Narrado
-                (pago)</a>
-            <a href="https://universonarrado.com.br/cursos/licoes-de-matematica" class="footer-a">Matemática com Universo
-                Narrado (pago)</a>
+            <a href="https://universonarrado.com.br/cursos/licoes-de-fisica" class="footer-a">Física com Universo Narrado (pago)</a>
+            <a href="https://universonarrado.com.br/cursos/licoes-de-matematica" class="footer-a">Matemática com Universo Narrado (pago)</a>
             <a href="https://seliga.com.br/" class="footer-a">Ciências Humanas com Se Liga (pago)</a>
             <a href="https://epifaniaexperiencia.com.br/" class="footer-a">Filosofia com Epifania Experiência (grátis)</a>
-            <a href="https://aluno.repertorioenem.com.br/dashboard" class="footer-a">Repertório ENEM - Questões e conteúdos
-                (gratis)</a>
+            <a href="https://aluno.repertorioenem.com.br/dashboard" class="footer-a">Repertório ENEM - Questões e conteúdos (gratis)</a>
             <a href="https://brasilescola.uol.com.br/" class="footer-a">Brasil escola (grátis)</a>
     
         </div>
@@ -264,7 +264,6 @@
             <a class="footer-a" href="https://github.com/Kilogabu">Github - Guimarães</a>
             <a class="footer-a" href="https://github.com/Kilogabu">Github - André</a>
         </div>
-    
     
     </footer>
 </body>
